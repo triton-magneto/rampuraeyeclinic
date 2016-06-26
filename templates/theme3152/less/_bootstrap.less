@@ -1,0 +1,106 @@
+// CSS Reset
+@import "bootstrap_addons/_reset.less";
+
+// Core variables and mixins
+@import "_variables.less"; // Custom for this template
+@import "bootstrap_addons/_mixins.less";
+
+// Grid system and page structure
+@import "../../../media/jui/less/scaffolding.less";
+@import "../../../media/jui/less/grid.less";
+@import "../../../media/jui/less/layouts.less";
+
+// Base CSS
+@import "../../../media/jui/less/type.less";
+@import "../../../media/jui/less/code.less";
+@import "bootstrap_addons/_forms.less";
+@import "bootstrap_addons/_tables.less";
+
+// Components: common
+// @import "../../../media/jui/less/sprites.less";
+@import "bootstrap_addons/_dropdowns.less";
+@import "../../../media/jui/less/wells.less";
+@import "../../../media/jui/less/component-animations.less";
+@import "bootstrap_addons/_close.less";
+
+// Components: Buttons & Alerts
+@import "bootstrap_addons/_buttons.less";
+@import "bootstrap_addons/_button-groups.less";
+@import "../../../media/jui/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "bootstrap_addons/_navs.less";
+@import "bootstrap_addons/_navbar.less";
+@import "../../../media/jui/less/breadcrumbs.less";
+@import "../../../media/jui/less/pagination.less";
+@import "../../../media/jui/less/pager.less";
+
+// Components: Popovers
+@import "../../../media/jui/less/modals.less";
+@import "../../../media/jui/less/tooltip.less";
+@import "../../../media/jui/less/popovers.less";
+
+// Components: Misc
+@import "../../../media/jui/less/thumbnails.less";
+@import "../../../media/jui/less/labels-badges.less";
+@import "../../../media/jui/less/progress-bars.less";
+@import "../../../media/jui/less/accordion.less";
+@import "../../../media/jui/less/carousel.less";
+@import "../../../media/jui/less/hero-unit.less";
+
+// Utility classes
+@import "../../../media/jui/less/utilities.less";
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../../../media/jui/less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Phones to portrait tablets and narrow desktops
+@import "../../../media/jui/less/responsive-767px-max.less";
+
+// Tablets to regular desktops
+@import "../../../media/jui/less/responsive-768px-979px.less";
+
+// Large desktops
+@import "../../../media/jui/less/responsive-1200px-min.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../../../media/jui/less/responsive-navbar.less";
+
+// Extended for JUI
+@import "bootstrap_addons/_bootstrap-extended.less"; // Has to be last to override when necessary
+
+// Icon Font
+.fa-file-add:before             { content: "\f016"; }
+.fa-remove:before             { content: "\f00d"; }
+.fa-picture:before             { content: "\f03e"; }
+.icon-edit:before{content: "\f044";}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+
+/* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}

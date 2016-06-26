@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>Social Login And Social Share</name>
+	<license>Open Source License, GPL v2 based</license>
+	<author>LoginRadius</author>
+	<authorEmail>developers@loginradius.com</authorEmail>
+	<authorUrl>http://www.loginradius.com</authorUrl>
+	<creationDate>2012-01-01</creationDate>
+	<copyright>2013, LoginRadius</copyright>
+	<version>4.0</version>
+	<description></description>
+	<scriptfile>install/script_socialloginandsocialshare.php</scriptfile>
+	<!-- Installation -->	
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">install/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<!-- Component -->
+	<media destination="com_socialloginandsocialshare" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+	
+	<!-- Administration -->
+	<administration>
+		<menu img="../media/com_socialloginandsocialshare/images/favicon.png">COM_SOCIALLOGINANDSOCIALSHARE</menu>
+		<files folder="admin">
+		    <folder>assets</folder>
+			<folder>install</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<file>index.html</file>
+			<file>controller.php</file>
+			<file>socialloginandsocialshare.php</file>
+		</files>
+		<languages folder="admin/language">
+			    <language tag="en-GB">en-GB/en-GB.com_socialloginandsocialshare.ini</language>
+		        <language tag="en-GB">en-GB/en-GB.com_socialloginandsocialshare.sys.ini</language>
+		</languages>
+	</administration>	
+	<languages folder="language">
+	            <language tag="en-GB">en-GB/en-GB.com_socialloginandsocialshare.ini</language>				
+		        <language tag="en-GB">en-GB/en-GB.mod_socialloginandsocialshare.ini</language>
+				<language tag="en-GB">en-GB/en-GB.mod_socialloginandsocialshare.sys.ini</language>
+          </languages>
+	
+	<!-- Modules -->
+	<modules>
+		<module module="mod_socialloginandsocialshare" title="Social Login" position="position-7" order="8" client="site" language="*" showtitle="0">
+			<files folder="mod_socialloginandsocialshare">
+                <filename module="mod_socialloginandsocialshare">mod_socialloginandsocialshare.php</filename>
+				<filename module="mod_socialloginandsocialshare">mod_socialloginandsocialshare.xml</filename>
+	            <filename module="mod_socialloginandsocialshare">helper.php</filename>
+	            <filename module="mod_socialloginandsocialshare">index.html</filename>
+	            <filename module="mod_socialloginandsocialshare">tmpl/default.php</filename>
+				<filename module="mod_socialloginandsocialshare">images/lr_provider_sprite.png</filename>
+	            <filename module="mod_socialloginandsocialshare">tmpl/index.html</filename>
+		    </files>
+	        
+			
+		</module>
+	</modules>	
+	
+	<!-- Plugins -->
+	<plugins>
+		<plugin plugin="socialloginandsocialshare" title="System - Social Login" order="-100" group="system">
+			<files folder="plg_socialloginandsocialshare">
+				<file plugin="socialloginandsocialshare">socialloginandsocialshare.php</file>
+		        <file>facebooklogin.php</file>
+				<file>googlelogin.php</file>
+				<file>socialloginandsocialshare_helper.php</file>
+				<file>socialloginandsocialshare.xml</file>				
+			</files>
+		</plugin>
+		<plugin plugin="socialshare" title="Content - Social Share" order="-100" group="content">
+			<files folder="plg_socialshare">
+				<file plugin="socialshare">socialshare.php</file>
+		        <file>socialshare.xml</file>			
+			</files>
+		</plugin>
+	</plugins>
+	
+</extension>	

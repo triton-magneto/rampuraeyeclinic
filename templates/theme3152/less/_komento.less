@@ -1,0 +1,367 @@
+// Core variables and mixins
+@import "_variables.less"; // Custom for this template
+@import "bootstrap_addons/_mixins.less";
+
+.page-blog{
+  .item{
+    >.kmt-readon{
+      display: none;
+    }
+  }
+}
+
+.kmt-readon{
+  width: auto;
+}
+
+
+#section-kmt{
+  margin: 0;
+  padding: 40px 0 0;
+  .kmt-author{
+    font: inherit !important;
+    text-transform: none !important;
+    font-weight: bold !important;
+    margin-bottom: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    height: auto !important;
+    a{
+      height: auto !important;
+    }
+  }
+  .kmt-avatar{
+    width: 48px;
+    float: left;
+    position: relative;
+    z-index: 10;
+    margin-right: 20px;
+    a{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+ .kmt-avatar + .kmt-content,
+ .kmt-rank + .kmt-content{
+    margin-left: 48px;
+ }
+  #kmt-fame{
+    margin: 0;
+  }
+  .kmt-list{
+    text-align: left;
+    > li.kmt-empty-comment{
+      margin-top: 0;
+    }
+  }
+  .kmt-head{
+    height: auto !important;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .float-wrapper > span{
+    vertical-align: top;
+    float: none;
+    height: auto;
+    background-position: left 2px;
+    & + span{
+      background-position: left 2px;
+    }
+  }
+  .kmt-form-content{
+    .kmt-form-addon > div{
+      max-width: 90%;
+      b{
+        margin-bottom: 10px !important;
+      }
+      .input.kmt-location{
+        max-width: 100%;
+      }
+    }
+  }
+  .kmt-content{
+    .parentContainer{
+      left: -70px;
+      right: -15px;
+      .kmt-author{
+        margin-left: 7px;
+      }
+    }
+  }
+  .input[type="checkbox"]{
+    margin-top: 0;
+  }
+  .radio input[type="radio"],
+  .checkbox input[type="checkbox"]{
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  .radio, .checkbox{
+    padding: 0;
+    border: none !important;
+    background: none !important;
+  }
+  .kmt-profile-avatar{
+    width: 60px;
+  }
+  .kmt-profile-activity{
+    li{
+      padding: 15px 8px !important;
+      min-width: 0 !important;
+    }
+  }
+  .kmt-time{
+    font-size: 13px;
+    a{
+      color: @textColor;
+    }
+    i{
+      margin-right: 3px;
+    }
+  }
+  .kmt-list > li > div{
+    padding: 0 0 20px;
+  }
+  .kmt-control-user .kmt-btn{
+    padding: 0;
+    font-size: 13px;
+    margin-left: 10px;
+  }
+  .kmt-list > li + li > div{
+    border: none;
+  }
+  .kmt-toolbar{
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .kmt-like-counter{
+    border: 1px solid @tableBorder;
+    .border-radius(@borderRadiusSmall);
+    line-height: 23px;
+    &:before{
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      content: '';
+      border-left: 5px solid @tableBorder;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      margin-top: -5px;
+      margin-left: 1px;
+    }
+    &:after{
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      content: '';
+      border-left: 5px solid @white;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      margin-top: -5px;
+    }
+  }
+  .kmt-control-user .kmt-like.cancel,
+  .kmt-control-user .kmt-reply.cancel{
+    color: @linkColorHover;
+  }
+  .kmt-option > span.kmt-admin-wrap > ul{
+    border: 1px solid @tableBorder;
+    background: @bodyBackground;
+  }
+  .kmt-option > span > a{
+  }
+  .kmt-admin-list{
+    font-size: ceil(@baseFontSize*.85);
+  }
+  .kmt-admin-wrap:hover{
+    a.kmt-admin-link{
+      color: @linkColorHover;
+    }
+  }
+  .kmt-form-content .kmt-form-addon{
+    border: 1px solid @inputBorder;
+    border-top: none;
+  }
+  .markItUpContainer{
+    border: 1px solid @inputBorder;
+  }
+  .author-kmt{
+
+  }
+  .kmt-rank-bar{
+    background: @textColor;
+  }
+  .kmt-rank-progress{
+    background: @linkColor;
+  }
+  .kmt-form-author ul{
+    margin: 0 0 0 -@gridGutterWidth1200;
+    li.col{
+      width: 33.33%;
+      .box-sizing(border-box);
+      padding-left: @gridGutterWidth1200;
+      padding-bottom: 29px;
+      div{
+      	position: relative;
+      }
+      mark{
+      	background: none;
+      	position: absolute;
+      	left: 17px;
+				bottom: 100%;
+				margin-bottom: -7px;
+        line-height: 18px;
+        font-size: 11px;
+				label{
+					font-size: 11px;
+					line-height: 18px;
+					background: #ff6363;
+					.border-radius(@baseBorderRadius);
+					padding: 0 4px;
+					color: #fff;
+					margin: 0;
+          display: block !important;
+					&:before {
+					content: '';
+						position: absolute;
+						left: 4px;
+						top: 100%;
+						border-top: 5px solid #ff6363;
+						border-right: 5px solid transparent;
+					}
+				}
+      }
+    }
+  }
+  .kmt-form-editor{
+  	> div {
+  		position: relative;
+  		mark{
+      	background: none;
+      	position: absolute;
+      	left: 17px;
+				bottom: 100%;
+				margin-bottom: -7px;
+        line-height: 18px;
+        font-size: 11px;
+				label{
+					font-size: 11px;
+					line-height: 18px;
+					background: #ff6363;
+					.border-radius(@baseBorderRadius);
+					padding: 0 4px;
+          display: block;
+					color: #fff;
+					margin: 0;
+          display: block !important;
+					&:before {
+					content: '';
+						position: absolute;
+						left: 4px;
+						top: 100%;
+						border-top: 5px solid #ff6363;
+						border-right: 5px solid transparent;
+					}
+				}
+      }
+  		> .input.textarea{
+		    height: 193px;
+        font-size: @baseFontSize + 4;
+        padding: 16px 20px;
+		  }
+	  }
+  }
+  .kmt-form-submit{
+    margin-top: 39px;
+    position: relative;
+  }
+  .kmt-item{
+    .kmt-form-submit{
+      .btn{
+        margin-right: 6px;
+      }
+    }
+  }
+  .kmt-body{
+    margin-bottom: 0;
+  }
+  #kmt-form{
+    border-bottom: 1px solid @tableBorder;
+    padding-bottom: 60px;
+  }
+  .kmt-text p{
+    padding-bottom: 20px;
+  }
+  .cancelEditButton{
+    background: @btnBackgroundHighlight;
+      border-color: @btnBorder;
+      color: @btnColorHighlight !important;
+      &:hover{
+        background: @btnBackground;
+        border-color: @btnBackground;
+        color: @btnColor !important;
+      }
+  }
+  .editInput.kmt-edit-form-input{
+    width: 100%;
+    height: 193px;
+  }
+  .submitButton{
+  	height: 0;
+  	width: 0;
+  	margin: 0;
+  	padding: 0;
+  	font-size: 0;
+  	line-height: 0;
+  	border: none;
+  	img{
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		z-index: 10;
+  		width: 100%;
+  		height: 100%;
+  		background: url(../images/preloader.gif) 50% 50% no-repeat @bodyBackground;
+  	}
+  }
+}
+
+.kmt-readon span.kmt-comment{
+  float: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+.foundryDialog .dialog-head{
+  padding-right: 24px;
+}
+
+#section-kmt{
+  .kmt-time{
+    a{
+      &:hover{
+        color: @linkColor;
+      }
+    }
+    i{
+      color: @linkColor;
+    }
+  }
+  .kmt-item{
+    .kmt-form-submit{
+      a.replyButton{
+        background: @btnBackgroundHighlight;
+        border-color: @btnBorder;
+        color: @btnColorHighlight;
+        &:hover{
+          background: @btnBackground;
+          border-color: @btnBackground;
+          color: @btnColor;
+        }
+      }
+    }
+  }
+}

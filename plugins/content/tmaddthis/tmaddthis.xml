@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1.0" type="plugin" group="content">
+  <name>Content - TM AddThis</name>
+  <author>TM</author>
+  <creationDate>April 2013</creationDate>
+  <copyright>Copyright (C) 2012 All rights reserved.</copyright>
+  <license></license>
+  <authorEmail></authorEmail>
+  <authorUrl></authorUrl>
+  <version>1.0.8</version>
+  <description>AddThis content plugin</description>
+  <files>
+    <filename plugin="tmaddthis">tmaddthis.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <languages>
+    <language tag="en-GB">language/en-GB.plg_content_tmaddthis.ini</language>
+    <language tag="en-GB">language/en-GB.plg_content_tmaddthis.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="addthis_id" type="text" default="ra-4d89903e1583a34e" label="PLG_TMADDTHIS_PUBLIC_ID" description="PLG_TMADDTHIS_PUBLIC_ID_DESC"/>
+        <field name="addthis_categories" type="category" extension="com_content" multiple="true" default="" label="PLG_TMADDTHIS_CATEGORIES" description="PLG_TMADDTHIS_CATEGORIES_DESC"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

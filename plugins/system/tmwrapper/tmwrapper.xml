@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="3.2" group="system" method="upgrade">
+    <name>plg_system_tmwrapper</name>
+    <version>1.0.0</version>
+    <creationDate>2015-05-29</creationDate>
+    <license>http://www.gnu.org/licenses/gpl-3.0</license>
+    <copyright>Copyright 2015 Template Monster. All rights reserved.</copyright>
+    <author>Template Monster</author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <description>PLG_TMWRAPPER_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="tmwrapper">tmwrapper.php</filename>
+        <filename plugin="tmwrapper">index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_tmwrapper.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_tmwrapper.sys.ini</language>
+    </languages>
+</extension>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0">
+	<name>bundle</name>
+	<packagename>bundle</packagename>
+	<version>1.6.5</version>
+	<description>
+		<![CDATA[
+			<p>This package installs the following Joomla extensions:</p>
+			<ul>
+				<li>Module Articles Single</li>
+				<li>Module Newsflash Advanced</li>
+				<li>Module Image Swoop</li>
+				<li>Module Superfish Menu</li>
+				<li>Plugin Google Map</li>
+				<li>Plugin AddThis</li>
+				<li>Module CarouFredSel</li>
+				<li>Module Recent templates (admin panel)</li>
+			</ul>
+		]]>
+	</description>
+		 <files folder="packages">
+		   <file type="module" id="mod_articles_single" client="site">mod_articles_single_v1.2.1.zip</file>
+		   <file type="module" id="mod_articles_news_adv" client="site">mod_articles_news_adv_j3_v1.5.1.zip</file>
+		   <file type="module" id="mod_caroufredsel" client="site">mod_caroufredsel_v1.2.2.zip</file>
+		   <file type="module" id="mod_image_swoop" client="site">mod_image_swoop_j3_v1.2.1.zip</file>
+		   <file type="module" id="mod_superfish_menu" client="site">mod_superfish_menu_v3.3.4.zip</file> 
+		   <file type="module" id="mod_tm_templates" client="administrator">mod_tm_templates_j3_v1.0.0.zip</file> 
+		   <file type="plugin" id="plugin_googlemap" client="site">plugin_googlemap_J25_J3x.v3.2.zip</file> 
+		   <file type="plugin" id="plg_tmaddthis" client="site">plg_tmaddthis_v1.0.6.zip</file> 
+		 </files>
+ </extension>

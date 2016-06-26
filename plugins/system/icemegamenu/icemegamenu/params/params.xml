@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" addfieldpath="/plugins/system/icemegamenu/icemegamenu/libs/element">
+	   <fieldset name="mega-fields" label="IceMegaMenu Paramters"> 
+			<!--<field name="icemega_showtitle" type="radio" default="1" label="Show Subtitle" description="Show Subtitle Desc">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>-->
+			<field name="icemega_subtitle" type="text" rows="1" size="22" default="" label="SubTitle" description="You may have a small description for your menu item title that will appear below it." />
+			<!--<field name="icemega_subtitle_width" type="text" default="150" label="Subtitle width" description="Subtitle width (px)" />
+			<field name="icemega_desc" type="textarea" rows="5" cols="30" default="" label="Mega description" description="Mega Description Desc" />-->
+			
+			<field name="spacer11" type="spacer" class="text" label="" />
+			<field name="spacer1" type="spacer" class="text" label="&lt;b&gt;MegaMenu Settings&lt;/b&gt;" />
+			<field name="icemega_cols" type="list" default="1" label="Nr of Columns" description="You may split the dropdown to columns with this feature and make your menu a mega menu module. Select the number of columns from the list." >
+				<option value="1">1 Column</option>
+				<option value="2">2 Columns</option>
+				<option value="3">3 Columns</option>
+				<option value="4">4 Columns</option>
+				<option value="5">5 Columns</option>
+				<option value="6">6 Columns</option>
+				<option value="7">7 Columns</option>
+			</field>
+			
+			<field name="icemega_width" type="text" size="5" default="" label="Dropdown Width" description="Enter the width value for megamenu dropdown." />
+
+			<field name="icemega_colwidth" type="text" size="22" default="" label="Column Width" description="Enter the column width value for each column. So for example if you have chosse 3 Columns on the paramter above you may enter here '300,200,150' which mean that for the first column the width will be 300px, for the second column 200px and for the third column the width will be 150px " />
+			
+			<field name="icemega_cols_items" type="text" size="22" default="" label="Nr of Items in Columns" description="Enter the number of menu items that you want to have on each column. For example if you have chosse 3 Columns on the paramter above and also let's say you have a total of 7 menu items on this dropdown you may enter here '3,3,1' which mean that on the first column you will have 3 menu items, on the second 3 menu items and on the last column you will have 1 menu item. Also you may leave it blank if you want the system to split in equal parts the menu items " />
+			
+			<field name="spacer22" type="spacer" class="text" label="" />
+			<field name="spacer2" type="spacer" class="text" label="&lt;b&gt;Load Modules Inside the Dropdown&lt;/b&gt;" />
+			
+			<field name="icemega_subtype" type="list" default="menu" label="Child Menu Type" description="In case you wish to use the menu item as defined on the Menu Item Type paramter on the left leave it to 'Menu Item'. In case you wish to load a module inside this menu item you may do so or by chossing directly from the Module Name or from chossing based from the Module Position. ">
+				<option value="menu">Menu Item</option>
+				<option value="mod">Modules</option>
+				<option value="pos">Module Positions</option>
+				<option value="anch">Anchor</option>
+			</field>
+			<field name="icemega_modules" type="icemodules" default="0" label="Display by Modules" description="Add the wanted modules by choosing them one by one." multiple="multiple" size="12" />
+			<field name="icemega_positions" type="icepositions" default="0" label="Display Positions" description="Display the modules that are assigned to a specific position." multiple="multiple" size="12"/>
+			<field name="icemega_anchors" type="icepositions" default="0" label="Anchor" description="Select the position" size="12" />
+			<field name="icemega_anchorsmenuitem" type="menuitem" label="Select a menu item" description="Select a menu item" />
+		</fieldset>
+	</fields>
+
+</form>

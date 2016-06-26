@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="3.2" group="system" method="upgrade">
+    <name>TM Lazy Load</name>
+    <version>1.2.2</version>
+    <creationDate>2014-07-04</creationDate>
+    <license>http://www.gnu.org/licenses/gpl-3.0</license>
+    <copyright>Copyright 2014 Template Monster. All rights reserved.</copyright>
+    <author>Template Monster</author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <description>PLG_TMLAZYLOAD_XML_DESCRIPTION</description>
+    <files>
+        <folder>HTML5</folder>
+        <filename plugin="tmlazyload">tmlazyload.php</filename>
+        <filename plugin="tmlazyload">tmlazyload.js</filename>
+        <filename plugin="tmlazyload">blank.gif</filename>
+        <filename plugin="tmlazyload">index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_tmlazyload.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_tmlazyload.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="/plugins/system/tmlazyload/fields">
+            <fieldset name="settings">
+                <field name="exclude_imagenames" type="textarea" default="" label="PLG_TMLAZYLOAD_EXCLUDEIMAGENAMES" description="PLG_TMLAZYLOAD_EXCLUDEIMAGENAMESDESC" rows="6" cols="60" />
+                <field name="exclude_imagenames_toggle" type="list" default="0" label="PLG_TMLAZYLOAD_EXCLUDEIMAGENAMES_TOGGLE" description="PLG_TMLAZYLOAD_EXCLUDEIMAGENAMES_TOGGLEDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="exclude_components" type="textarea" default="" label="PLG_TMLAZYLOAD_EXCLUDECOMPONENTS" description="PLG_TMLAZYLOAD_EXCLUDECOMPONENTSDESC" rows="6" cols="60" />
+                <field name="exclude_components_toggle" type="list" default="0" label="PLG_TMLAZYLOAD_EXCLUDECOMPONENTS_TOGGLE" description="PLG_TMLAZYLOAD_EXCLUDECOMPONENTS_TOGGLEDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="exclude_urls" type="textarea" default="" label="PLG_TMLAZYLOAD_EXCLUDEURLS" description="PLG_TMLAZYLOAD_EXCLUDEURLSDESC" rows="6" cols="60" />
+                <field name="exclude_urls_toggle" type="list" default="0" label="PLG_TMLAZYLOAD_EXCLUDEURLS_TOGGLE" description="PLG_TMLAZYLOAD_EXCLUDEURLS_TOGGLEDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="exclude_editor" type="list" default="1" label="PLG_TMLAZYLOAD_EXCLUDEJOOMLAEDITOR" description="PLG_TMLAZYLOAD_EXCLUDEJOOMLAEDITORDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="exclude_bots" type="list" default="1" label="PLG_TMLAZYLOAD_EXCLUDEBOTS" description="PLG_TMLAZYLOAD_EXCLUDEBOTSDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="botslist" type="text" size="80" default="bot,spider,crawler,libwww,search,archive,slurp,teoma,facebook,twitter" label="PLG_TMLAZYLOAD_EXCLUDEBOTSLIST" description="PLG_TMLAZYLOAD_EXCLUDEBOTSLISTDESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

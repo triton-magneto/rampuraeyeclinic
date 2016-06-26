@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="joomgallery" method="upgrade">
+  <name>PLG_JOOMGALLERY_JOOMFANCYBOX</name>
+  <author>fabrice jossa</author>
+  <creationDate>20.01.2013</creationDate>
+  <copyright>Copyright (C) 2013 - 2013 Open Source Matters. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>team@joomgallery.net</authorEmail>
+  <authorUrl>http://www.en.joomgallery.net</authorUrl>
+  <version>1.1</version>
+  <description>PLG_JOOMGALLERY_JOOMFANCYBOX_XML_DESCRIPTION</description>
+  <files>
+    <filename plugin="joomfancybox">joomfancybox.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <media>
+    <folder>plg_joomfancybox</folder>
+  </media>
+  <languages folder="language">
+    <language tag="de-DE">de-DE/de-DE.plg_joomgallery_joomfancybox.ini</language>
+    <language tag="de-DE">de-DE/de-DE.plg_joomgallery_joomfancybox.sys.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_joomgallery_joomfancybox.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_joomgallery_joomfancybox.sys.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.plg_joomgallery_joomfancybox.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.plg_joomgallery_joomfancybox.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="global_box_existent" type="radio" default="0" label="PLG_JOOMGALLERY_JOOMFANCYBOX_GLOBAL_BOX_EXISTENT_LABEL" description="PLG_JOOMGALLERY_JOOMFANCYBOX_GLOBAL_BOX_EXISTENT_DESC" class="btn-group">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced" label="PLG_JOOMGALLERY_JOOMFANCYBOX_ADVANCED_LABEL">
+        <!--<field name="placement" type="spacer" label="PLG_JOOMGALLERY_JOOMFANCYBOX_SCPLACEMENT_LABEL" />
+        <field name="script_position" type="radio" default="head" label="PLG_JOOMGALLERY_JOOMFANCYBOX_SCRIPT_POSITION_LABEL" description="PLG_JOOMGALLERY_JOOMFANCYBOX_SCRIPT_POSITION_DESC">
+          <option value="head">PLG_JOOMGALLERY_JOOMFANCYBOX_SCRIPT_POSITION_HEAD</option>
+          <option value="body">PLG_JOOMGALLERY_JOOMFANCYBOX_SCRIPT_POSITION_BODY</option>
+        </field>
+        <field name="noconflict" type="radio" default="1" label="PLG_JOOMGALLERY_JOOMFANCYBOX_NOCONFLICT_LABEL" description="PLG_JOOMGALLERY_JOOMFANCYBOX_NOCONFLICT_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field type="spacer" hr="true" />
+        <field name="optional" type="spacer" label="PLG_JOOMGALLERY_JOOMFANCYBOX_OPTIONAL_LABEL" />-->
+        <field name="mousewheel" type="radio" default="0" label="PLG_JOOMGALLERY_JOOMFANCYBOX_MOUSEWHEEL_LABEL" description="PLG_JOOMGALLERY_JOOMFANCYBOX_MOUSEWHEEL_DESC" class="btn-group">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="buttons" type="radio" default="0" label="PLG_JOOMGALLERY_JOOMFANCYBOX_FBBUTTON_LABEL" description="PLG_JOOMGALLERY_JOOMFANCYBOX_FBBUTTON_DESC" class="btn-group">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <!--<field name="media" type="radio" default="0" label="PLG_JOOMGALLERY_JOOMFANCYBOX_FBMEDIA_LABEL" description="PLG_JOOMGALLERY_JOOMFANCYBOX_FBMEDIA_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>-->
+        <field name="thumbs" type="radio" default="0" label="PLG_JOOMGALLERY_JOOMFANCYBOX_FBTHUMBS_LABEL" description="PLG_JOOMGALLERY_JOOMFANCYBOX_FBTHUMBS_DESC" class="btn-group">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="init_script" filter="raw" label="PLG_JOOMGALLERY_JOOMFANCYBOX_FBJAVA_LABEL" type="textarea" default="" description="PLG_JOOMGALLERY_JOOMFANCYBOX_FBJAVA_DESC" rows="15" cols="300"/>
+      </fieldset>
+    </fields>
+  </config>
+  <updateservers>
+    <server type="collection" priority="1" name="JoomGallery Update Service">http://www.en.joomgallery.net/components/com_newversion/xml/extensions3.xml</server>
+  </updateservers>
+</extension>

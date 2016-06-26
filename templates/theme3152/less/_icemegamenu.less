@@ -1,0 +1,336 @@
+// Core variables and mixins
+@import "_variables.less"; // Custom for this template
+@import "bootstrap_addons/_mixins.less";
+
+.icemegamenu {
+	ul, 
+	li {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		&.current,
+		&.active{
+			> a.iceMenuTitle {
+				color: @menuItemColorAct;
+				background: @menuItemBgColorAct;
+			}
+		}
+	}
+	> ul {
+		margin: 0;
+		padding: 0;
+		z-index: 999;
+		clear: both;
+		float: right;
+		> li {
+			display: block;
+			float: left;
+			position: relative;
+			> a.iceMenuTitle {
+				position: relative;
+				z-index: 999;
+				display: block;
+				padding: 0px;
+				line-height: @menuItemLineHeight;
+				font-size: @menuItemFontSize;
+				color: @menuItemColor;
+				background: @menuItemBgColor;
+				font-family: @menuItemFontFamily;
+				.transition(all .25s ease-out);
+				text-transform: uppercase;
+				&.hover,
+				&.icemega_active{
+					color: @menuItemColorAct;
+					background: @menuItemBgColorAct;
+				}
+			}
+			&.hover{
+				> a.iceMenuTitle {
+					color: @menuItemColorAct;
+					background: @menuItemBgColorAct;
+				}
+			}
+			span.icemega_desc {
+				display: block;
+				padding: 0;
+				line-height: 1.25em;
+				color: @menuItemDescColor;
+			}
+			&.fullwidth{
+				position: static;
+				.icesubMenu{
+					&.sub_level_1{
+						>li{
+							max-width: 1170px;
+							margin-right: auto;
+							margin-left: auto;
+							padding: 0 @baseLineHeight;
+						}
+					}
+					h1,h2,h3,h4,h5,h6,
+					.moduleTitle {
+						font-size: 24px;
+						font-weight: normal;
+						line-height: 35px;
+						margin: 0 0 @baseLineHeight;
+						padding: 0;
+						letter-spacing: 0;
+						text-align: left;
+						text-transform: none;
+					}
+					.item{
+						margin-bottom: @baseLineHeight*2;
+					}
+					.unstyled,
+					.menu,
+					.item_list,
+					.categories-module{
+						margin: 0;
+						li{
+							font-size: @baseFontSize;
+							line-height: @baseLineHeight;
+							padding-bottom: 10px;
+							margin: 0px;
+							&:before{
+								display: none;
+							}
+							a{
+								color: @white;
+								&:hover{
+									color: @linkColor;
+								}
+							}
+						}
+					}
+					.mod-article-single{
+						.moduletable {
+							margin-bottom: @baseLineHeight;
+						}
+					}
+					.unstyled{
+						padding-top: 20px;
+					}
+					.btn{
+						.border-radius(6px);
+						padding: 14px 23px 14px;
+						background: @redDarker;
+						&:hover,
+						&:focus,
+						&:active,
+						&.active{
+							background: @white;
+							color: @grayDark !important;
+						}
+					}			
+					.control-group {
+						margin-bottom: 4px;
+						.inputbox{
+							height: 37px;
+							background: @grayDark;
+							border-color: #46474f;
+							color: @white;
+							font-size: @baseFontSize + 1;
+							padding: 0 9px;
+							line-height: 37px;
+							width: 100%;
+						}
+						input::-webkit-input-placeholder { /* WebKit browsers */
+							color: @white;
+						}
+						input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+							color: @white;
+						}
+						input::-moz-placeholder { /* Mozilla Firefox 19+ */
+							color: @white;
+						}
+						input:-ms-input-placeholder { /* Internet Explorer 10+ */
+							color: @white;
+						}
+					}
+				}
+			}
+			+li{
+				padding-left: 46px;
+			}
+		}
+		&:after{
+			clear: both;
+			display: block;
+			content: '';
+		}
+		h1,h2,h3,h4,h5,h6{
+			color: @white;
+			a{
+				color: @white;
+				&:hover{
+					color: @linkColor;
+				}
+			}
+		}
+	}
+	.dropdown-menu{
+		li{
+			a{
+				color: @grayDark !important;
+				padding: 0 10px !important;
+				&:hover{
+					color: @white !important;
+				}
+			}
+		}
+	}
+}
+
+div.icemegamenu ul#icemegamenu  li.active a.icemega_active > span.icemega_title{ 
+	color: @menuItemColorAct;
+}
+
+/* when dont have subtitle */
+.icemegamenu > ul > li >  a.iceMenuTitle > span.icemega_nosubtitle {
+	display: inline-block;
+}
+
+.ice-megamenu-toggle {
+	margin-bottom: @baseLineHeight;
+	display: none;
+	float: none;
+	border: 1px solid @inputBorder;
+	a {
+		display: block;
+		font-size: 0;
+		line-height: 0;
+		padding-top: 30px;
+		width: 100%;
+		cursor: pointer;
+		text-align: center;
+		height: 0;
+		position: relative;
+		&:before{
+			font-size: 20px;
+			line-height: 30px;
+			font-family: FontAwesome;
+			content: '\f0c9';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}			
+
+/* Submenu */
+ul.icesubMenu {
+	position: absolute;
+	z-index: 600;
+	margin: 0;
+	top: 100%;
+	left: 0px;
+	height: 0;
+	overflow: hidden;
+    opacity: 0;
+    background: @subMenuBg;
+    .transition(all .25s ease-out);
+    .translate(0, 30px);
+    pointer-events: none;
+}
+
+
+#icemegamenu li.hover > ul.icesubMenu {
+	opacity: 1;
+	overflow: visible;
+	.translate(0, 0px);
+	pointer-events: auto;
+}
+
+#icemegamenu ul.icesubMenu.visible{
+	height: auto;
+}
+
+ul.icesubMenu ul > li {
+	position: relative;
+}
+
+ul.icesubMenu li {
+	a.iceMenuTitle {
+		display: block;
+		font-size: @subMenuItemFontSize;
+		line-height: @subMenuItemLineHeight;
+		font-family: @subMenuItemFontFamily;
+		background: @subMenuItemBgColor;
+		color: @subMenuItemColor;
+		padding: 6px 12px;
+	}
+	&.active,
+	&:hover,
+	&.hover{
+		>a.iceMenuTitle {
+			color: @subMenuItemColorAct;
+			background: @subMenuItemBgColorAct;
+		}
+	}
+}
+
+/* when is parent */
+ul.icesubMenu li.parent {
+
+}
+
+/* Second Level Dropdown */
+ul.sub_level_2,
+ul.sub_level_3,
+ul.sub_level_4,
+ul.sub_level_5 {
+	top: 0px;
+	left: 100%;
+	z-index: 99999;
+	.translate(30px, 0);
+}
+
+ul.icesubMenu ul > li.hover > ul {
+	opacity: 1;
+	overflow: visible;
+	visibility: visible;
+	.translate(0, 0);
+}
+
+/* Modules inside dropdown */
+.icesubMenu .icemega_cover_module {
+	color: @subMenuItemColor;
+	a {
+		color: @subMenuItemColor;
+		&:hover{
+			color: @subMenuItemColorAct;
+		}
+	}
+}
+
+.icesubMenu .icemega_cover_module span.iceModuleTile {
+	display: block;
+}
+
+
+.ice_righttoleft{
+	left: auto!important;
+	right: 0;
+}
+
+.icemega_modulewrap{
+	padding: 40px 15px 0px;
+}
+
+.nav-collapse .icesubMenu {
+	.nav > li > a,
+	.dropdown-menu a{
+		padding: 0;
+		margin-bottom: 0;
+		color: @menuItemColor;
+		&:hover{
+			color:lighten(@linkColor,20%);
+		}
+	}
+}
+
+.nav-collapse.collapse{
+	height: auto;
+}

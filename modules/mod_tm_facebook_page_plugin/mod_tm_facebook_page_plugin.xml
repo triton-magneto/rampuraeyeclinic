@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>mod_tm_facebook_page_plugin</name>
+	<author>TemplateMonster</author>
+	<creationDate>May 2015</creationDate>
+	<copyright>Copyright (c) 2012-2015 by TemplateMonster - www.templatemonster.com</copyright>
+	<license>Licensed under the GNU/GPLv2:  http://www.opensource.org/licenses/mit-license.php</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.templatemonster.com</authorUrl>
+	<version>1.0.1</version>
+	<description>MOD_TM_FACEBOOK_PAGE_PLUGIN_XML_DESCRIPTION</description> 
+	<files>
+		<folder>tmpl</folder>
+		<filename module="mod_tm_facebook_page_plugin">mod_tm_facebook_page_plugin.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_tm_facebook_page_plugin.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_tm_facebook_page_plugin.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_tm_facebook_page_plugin.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field 
+					name="appID"
+					type="text"
+					default=""
+					required="required"
+					label="MOD_TM_FACEBOOK_PAGE_PLUGIN_APP_ID_LABEL" 
+					description="MOD_TM_FACEBOOK_PAGE_PLUGIN_APP_ID_DESC" />
+				<field 
+					name="pageURL"
+					type="text"
+					default="https://www.facebook.com/facebook"
+					label="MOD_TM_FACEBOOK_PAGE_PLUGIN_PAGE_URL_LABEL" 
+					description="MOD_TM_FACEBOOK_PAGE_PLUGIN_PAGE_URL_DESC" />
+				<field 
+					name="name"
+					type="text"
+					default="Facebook"
+					label="MOD_TM_FACEBOOK_PAGE_PLUGIN_YOUR_COMPANY_NAME_LABEL" 
+					description="MOD_TM_FACEBOOK_PAGE_PLUGIN_YOUR_COMPANY_NAME_DESC" />
+				<field
+					name="width"
+					type="text"
+					default=""
+					label="MOD_TM_FACEBOOK_PAGE_PLUGIN_WIDTH_LABEL"
+					description="MOD_TM_FACEBOOK_PAGE_PLUGIN_WIDTH_DESC" />
+				<field
+					name="height"
+					type="text"
+					default=""
+					label="MOD_TM_FACEBOOK_PAGE_PLUGIN_HEIGHT_LABEL"
+					description="MOD_TM_FACEBOOK_PAGE_PLUGIN_HEIGHT_DESC" />
+				<field
+					name="show_faces"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_TM_FACEBOOK_PAGE_PLUGIN_FACES_LABEL"
+					description="MOD_TM_FACEBOOK_PAGE_PLUGIN_FACES_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field
+					name="show_posts"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_TM_FACEBOOK_PAGE_PLUGIN_POSTS_LABEL"
+					description="MOD_TM_FACEBOOK_PAGE_PLUGIN_POSTS_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field
+					name="hide_cover"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_TM_FACEBOOK_PAGE_PLUGIN_COVER_LABEL"
+					description="MOD_TM_FACEBOOK_PAGE_PLUGIN_COVER_DESC">
+					<option value="1">JTRUE</option>
+					<option value="0">JFALSE</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					default=""
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

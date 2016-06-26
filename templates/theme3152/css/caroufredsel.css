@@ -1,0 +1,116 @@
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mod_caroufredsel {
+  overflow: hidden;
+}
+.caroufredsel_wrapper {
+  cursor: auto !important;
+}
+.list_carousel {
+  padding: 0;
+  width: auto;
+  position: relative;
+  margin: 0 0 0 -30px;
+}
+.list_carousel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list_carousel ul li {
+  display: block;
+  float: left;
+}
+.list_carousel ul li .item_content {
+  padding: 0 0 0 30px;
+  margin: 0;
+}
+.clearfix {
+  float: none;
+  clear: both;
+}
+/*Navigation*/
+.caroufredsel_prev,
+.caroufredsel_next {
+  position: absolute;
+  top: 50%;
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin: -10px 0 0 0;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.caroufredsel_prev span,
+.caroufredsel_next span {
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.caroufredsel_prev {
+  left: 30px;
+}
+.caroufredsel_next {
+  right: 0;
+}
+/*Pagination*/
+.caroufredsel_pagination {
+  text-align: center;
+}
+.caroufredsel_pagination a {
+  display: inline-block;
+  padding: 0 0.5em;
+}
+@media (max-width: 1200px) {
+  .list_carousel {
+    margin: 0 0 0 -20px;
+  }
+  .list_carousel ul li .item_content {
+    padding: 0 0 0 20px;
+  }
+  .caroufredsel_prev {
+    left: 20px;
+  }
+}
+@media (max-width: 979px) {
+  .list_carousel {
+    margin: 0 0 0 -12px;
+  }
+  .list_carousel ul li .item_content {
+    padding: 0 0 0 12px;
+  }
+  .caroufredsel_prev {
+    left: 12px;
+  }
+}

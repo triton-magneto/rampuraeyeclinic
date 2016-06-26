@@ -1,0 +1,506 @@
+// Core variables and mixins
+@import "_variables.less"; // Custom for this template
+@import "bootstrap_addons/_mixins.less";
+
+img.jg_photo{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+img.jg_photo, .jg_minis a img{
+  border: none;
+}
+
+a:hover img.jg_photo, .jg_minis a:hover img{
+  border: none;
+}
+
+.jg_catelem_photo{
+  font-size: 0;
+  line-height: 0;
+}
+
+.jg_row{
+  padding: 0;
+  margin: 0 -12px 0 -@gridGutterWidth1200;
+}
+
+.jg_element_cat,
+.jg_subcatelem_cat{
+  padding-left: @gridGutterWidth1200;
+  .box-sizing(border-box);
+  padding-bottom: 20px;
+}
+
+.jg_element_cat{
+  display: inline-block;
+  float: none;
+}
+.loaded{
+  .jg_element_cat{
+    display: none;
+  }
+}
+
+.jg_imgalign_catsubs{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  .jg_photo{
+    .transition(all .5s linear);
+  }
+  &:hover{
+    .jg_photo{
+      .scale(1.1);
+    }
+    .jg_subcatelem_txt{
+      .opacity(100);
+    }
+  }
+}
+
+.jg_subcatelem_cat a{
+  height: auto;
+}
+
+.jg_subcatelem_photo{
+  font-size: 0;
+  line-height: 0;
+  a{
+    display: block;
+  }
+}
+
+.jg_subcatelem_txt{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  .transition(.5s ease);
+  .opacity(0);
+  color: #fff;
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .opacity(50);
+    content: '';
+    background: @black;
+  }
+  &:after{
+    content: '';
+    height: 100%;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  >*{
+    position: relative;
+    z-index: 2;
+  }
+  ul{
+    display: inline-block;
+    max-width: 99%;
+    vertical-align: middle;
+    .box-sizing(border-box);
+    font-size: @baseFontSize;
+    a{
+      position: relative;
+    }
+  }
+
+  .jg_subcatelem_txt__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.jg_catelem_txt{
+  margin: 0;
+  .gallery_desc{
+    p{
+      & + p{
+        display: none;
+      }
+    }
+  }
+}
+
+.jg_dtl_photo{
+  font-size: 0;
+  line-height: 0;
+  .lazy_container{
+    width: 100%;
+    .lazy_preloader{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    img{
+      position: relative;
+    }
+  }
+}
+
+div.jg_details, div.jg_voting, div.jg_commentsarea, div.jg_send2friend, div.jg_bbcode, div.jg_exif, div.jg_panemodule{
+  border: none;
+  margin: 0;
+}
+
+.jg_detailnavi{
+  margin-bottom: 0;
+}
+
+.jg_iconbar{
+  padding: 0;
+}
+
+.jg_imgtitle{
+  text-align: left;
+}
+
+.jg_imgalign_catimgs{
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  .jg_photo{
+    .transition(all .5s linear);
+  }
+  .jg_catelem_txt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    .opacity(0);
+    .transition(.5s ease);
+    color: #fff;
+    &:before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .opacity(50);
+      content: '';
+      background: @black;
+    }
+    &:after{
+      content: '';
+      height: 100%;
+      display: inline-block;
+      width: 0;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+    *>{
+      position: relative;
+      z-index: 2;
+    }
+    ul{
+      display: inline-block;
+      .box-sizing(border-box);
+      padding: 0 10px;
+      max-width: 99%;
+      vertical-align: middle;
+      font-size: @baseFontSize;
+      line-height: @baseLineHeight;
+    }
+    .jg_links{
+      a{
+        color: #fff;
+        .transition(.5s ease);
+        font-size: 22px;
+        line-height: 22px;
+        margin: 0 7px;
+        display: inline-block;
+        &:hover{
+          color:#999;
+        }
+      }
+    }
+  }
+  &:hover,
+  &.hover{
+    .jg_photo{
+      .scale(1.1);
+    }
+    .jg_catelem_txt{
+      .opacity(100);
+    }
+  }
+}
+
+.jg_catorderlist{
+  text-align: left;
+  white-space: normal;
+  >strong{
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+.fancybox-close{
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: none;
+  color: #fff;
+  font-size: 22px;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 36px !important;
+  line-height: 36px;
+  .transition(font-size .2s ease);
+  &:before{
+    content:'\f057';
+    font-family: FontAwesome;
+  }
+  &:hover{
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+.fancybox-lock .fancybox-overlay{
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.fancybox-prev,
+.fancybox-next{
+  overflow: hidden;
+  span{
+    height: 100px;
+    width: 50px;
+    margin-top: -50px;
+    background: none;
+    color: #fff;
+    .transition(font-size .2s ease);
+    overflow: hidden;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      .transition(border-color .3s ease);
+      width: 100px;
+      height: 100px;
+      border-left: 2px solid #fff;
+      border-top: 2px solid #fff;
+      .box-sizing(border-box);
+    }
+  }
+  &:hover{
+    span{
+      color: #fff;
+      &:before{
+        border-left-color: #666;
+        border-top-color: #666;
+      }
+    }
+  }
+}
+
+.fancybox-prev span{
+  &:before{
+    .rotate(-45deg);
+    left: 20px;
+  }
+}
+
+.fancybox-next span{
+  &:before{
+    .rotate(135deg);
+    left: -70px;
+  }
+}
+
+.fancybox-skin{
+  background: #191919;
+}
+
+.fancybox-image{
+  .opacity(99);
+}
+
+#fancybox-thumbs{
+  height: 54px;
+  text-align: center;
+  .transition(bottom .5s ease);
+  ul{
+    font-size: 0;
+    line-height: 0;
+    white-space: nowrap;
+    display: inline-block;
+    top: 0 !important;
+    background: #191919;
+    li{
+      float: none;
+      display: inline-block;
+      padding: 0;
+      border: none !important;
+      position: relative;
+      background: url(../images/loader.gif) 50% 50% no-repeat;
+      overflow: hidden;
+      .transition(opacity .3s ease);
+      .holder{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        cursor: pointer;
+      }
+      &.active{
+        .opacity(100);
+      }
+    }
+  }
+}
+
+.fancybox-lock{
+  body{
+    overflow: visible !important;
+  }
+}
+
+body.mobile{
+  #fancybox-thumbs{
+    display: none;
+  }
+}
+
+.fancybox-wrap{
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+.fancybox-inner,
+.fancybox-skin,
+.fancybox-outer{
+  width: 100% !important;
+  height: 100% !important;
+  position: relative;
+}
+
+.fancybox-image{
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.jg_links{
+  .fancybox-thumb{
+    .lazy,
+    img{
+      display: none;
+    }
+  }
+}
+.fancybox-image{
+  .scale(1.02);
+  .transition(all .1s ease);
+  .opacity(0);
+}
+.fancybox-type-image{
+  &.fancybox-opened{
+    .fancybox-image{
+      .scale(1);
+      .opacity(100);
+    }
+  }
+}
+
+.fancybox-nav{
+  width: 56px;
+  z-index: 100;
+  .transition(all .5s ease);
+  span{
+    visibility: visible;
+  }
+}
+
+.fancybox-close{
+  .transition(right .5s ease);
+}
+
+.fancybox-full{
+  #fancybox-thumbs{
+    bottom: -100px;
+  }
+  .fancybox-prev{
+    left: -100px;
+  }
+  .fancybox-next,
+  .fancybox-close{
+    right: -100px;
+  }
+}
+
+.ui-loader{
+  display: none;
+}
+
+.jg_pathway{
+  padding: 0;
+  margin: 0 0 @baseLineHeight;
+}
+
+ul#order{
+  margin: 0 0 15px;
+  overflow: hidden;
+  li{
+    display: inline-block;
+  }
+}
+
+.jg_commentsarea{
+  clear: both;
+  padding-top: 20px;
+  textarea{
+    width: 100%;
+    height: 200px;
+  }
+  .username{
+    font-weight: bold;
+    font-size: @baseFontSize*1.2;
+    line-height: @baseLineHeight*1.2;
+  }
+  div[class*="jg_row"]{
+    padding-bottom: 40px;
+    .comment_text{
+      display: block;
+      
+    }
+  }
+}
+
+.jg-details-header h4{
+  text-align: inherit;
+  padding: 0;
+}
+
+label#cmttext-error{
+  color: @errorText;
+}
+
+.jg_dtl_photo{
+  text-align: center;
+}

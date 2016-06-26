@@ -1,0 +1,467 @@
+// Core variables and mixins
+@import "_variables.less"; // Custom for this template
+@import "bootstrap_addons/_mixins.less";
+
+#Kunena {
+	table,
+	tr,
+	td,
+	th,
+	div,
+	fieldset,
+	span,
+	li,
+	dt,
+	legend{
+		border-color: @tableBorder !important;
+	}
+	legend{
+		color: inherit;
+	}
+	table{
+		background: @tableBackground;
+	}
+	td{
+		.transition(background 0.5s);
+		&:nth-child(odd){
+			background: @tableBackgroundAccent;
+		}
+	}
+	tr,
+	td{
+		border-bottom: 1px solid;
+	}
+	dt{
+		font-weight: normal;
+	}
+	select,
+	button{
+		margin-bottom: 9px;
+	}
+	a.close,
+	a.open{
+		background-color: @tableBorder;
+		.opacity(100);
+		cursor: pointer;
+		.transition(background-color 0.5s);
+		&:hover{
+			background-color: darken(@tableBorder, 10%);
+		}
+	}
+	#ktab li{
+		.transition(all 0.5s);
+		margin-bottom: -1px !important;
+		border: 1px solid;
+		.border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+		background: lighten(@tableBorder, 10%);
+		&#current,
+		&:hover{
+			background: @bodyBackground;
+			border-bottom-color: @bodyBackground !important;
+		}
+	}
+	.kunena_body{
+	}
+	#ktopmenu{
+		border-bottom: 1px solid;
+		display: block;
+		margin: 0 0 20px;
+	}
+	.kforum-pathway {
+		margin-top: 0;
+		border-top: 1px solid;
+		.path-element{
+			position: relative;
+			&:before{
+				position: absolute;
+				left: 1px;
+				top: 50%;
+				border-left: 4px solid darken(@tableBorder, 20%);
+				border-top: 4px solid transparent;
+				border-bottom: 4px solid transparent;
+				content: '';
+				margin-top: -4px;
+			}
+		}
+	}
+	form{
+		margin: 0px;
+		&.kuena_form{
+			margin: 8px;
+		}
+	}
+	.kicon-button {
+		background: none !important;
+		span span{
+			color: #fff;
+		}
+	}
+	div.kmessage-editmarkup-cover{
+		border: none;
+	}
+
+	.kwho-admin,
+	a.kwho-admin {
+	    color: #f00 !important;
+	}
+	a.kwho-admin,
+	a.kwho-globalmoderator,
+	a.kwho-moderator,
+	a.kwho-banned,
+	a.kwho-user,
+	a.kwho-guest{
+		&:hover{
+			text-decoration: underline !important;
+		}
+	}
+	.kwho-globalmoderator,
+	a.kwho-globalmoderator{
+		color: #800000 !important;
+	}
+	.kwho-moderator,
+	a.kwho-moderator {
+	    color: #00f !important;
+	}
+	.kwho-banned,
+	a.kwho-banned {
+	    color: #A39D49 !important;
+	}	
+	.kwho-user,
+	a.kwho-user {
+	    color: #5388B4 !important;
+	}
+	.kwho-guest,
+	a.kwho-guest{
+		color: #666 !important;
+	}
+	label{
+		display: inline;
+	}
+	.kblock div.kheader{
+		>span{
+			display: block;
+			font-weight: bold;
+			font-size: @baseFontSize*1.2;
+			line-height: @baseLineHeight*1.2;
+			&.k-name{
+				display: inline;
+			}
+			&.kright{
+				float: right;
+			}
+			a{
+				color: inherit;
+			}
+		}
+		div.ktitle-desc{
+			margin-top: 10px;
+			padding-bottom: 0;
+		}
+	}
+	div.kblock div.kbody{
+		border-bottom: none;
+	}
+	.kbody{
+		&:after{
+			clear: both;
+			display: block;
+			content: '';
+		}
+	}
+	.ktoggler{
+		display: none;
+	}
+	div.input,
+	span.input,	
+	td.input{
+		padding: 10px 0 5px;
+		display: inline-block;
+		max-width: 100%;
+		input{
+			margin-right: 5px;
+		}
+		>span{
+			display: block;
+			padding: 10px 0 0;
+			white-space: nowrap;
+			label{
+				display: inline-block;
+				margin-bottom: 10px;
+			}
+			button{
+				float: right;
+				margin-right: 5px;
+			}
+		}
+	}
+	.klink-block{
+		span{
+			padding: 0 5px 0 0;
+			&.kprofilebox-register{
+				display: block;
+				padding: 5px 0 0;
+			}
+		}
+	}
+	& + div[style]{
+		display: none;
+	}
+	span.kunreadforum{
+		background: none;
+		&:before{
+			content: '\f07c';
+			font-family: FontAwesome;
+			font-size: 32px;
+			line-height: 32px;
+		}
+	}
+	span.kreadforum,
+	span.knotloginforum{
+		background: none;
+		&:before{
+			content: '\f115';
+			font-family: FontAwesome;
+			font-size: 32px;
+			line-height: 32px;
+		}
+	}
+	.kwhoicon,
+	.kstatsicon{
+		background: none;
+		&:before{
+			font-family: FontAwesome;
+			font-size: 32px;
+			line-height: 32px;
+		}
+	}
+	.kwhoicon{
+		&:before{
+			content: '\f0c0';
+		}
+	}
+	.kstatsicon{
+		&:before{
+			content: '\f080';
+		}
+	}
+	div.kmessage-buttons-row{
+		height: auto;
+		line-height: inherit;
+		font-size: inherit;
+	}
+	.klist-actions-forum{
+		div.kmessage-buttons-row{
+			display: inline-block;
+		}
+	}
+	.klist-bottom{
+		padding-bottom: 0 !important;
+	}
+	.kwholegend{
+		display: none;
+	}
+	.kcol-ktopicicon{
+		a{
+			&:before{
+				content: '\f095';
+				font-family: FontAwesome;
+				font-size: 20px;
+				line-height: 24px;
+			}
+		}
+		&.unanswered{
+			a{
+				&:before{
+					content: '\f098';
+					font-family: FontAwesome;
+					font-size: 32px;
+					line-height: 32px;
+				}
+			}
+	}
+	}
+	img[src$='unanswered.png'],
+	img[src$='normal.png']{
+		height: 0;
+		width: 0;
+	}
+	.k-profile{
+		.clrline{
+			display: none;
+		}
+		.kheader{
+			a.kwho-admin{
+				font-size: 0;
+				line-height: 0;
+				color: @btnColor !important;
+				text-decoration: none !important;
+				font-weight: normal;
+				&:hover{
+					&:after{
+						font-size: 26px;
+					}
+				}
+				&:after{
+					content: '\f044';
+					font-family: FontAwesome;
+					font-size: 20px;
+					line-height: 24px;
+					.transition(all .2s ease);
+				}
+			}
+			.back{
+				a.kwho-admin{
+					&:after{
+						content: '\f112';
+					}
+				}
+			}
+		}
+	}
+	div.kavatar-lg{
+		border: none;
+		display: block;
+		height: auto;
+	}
+	span[class*='kbuttononline']{
+		margin: 0;
+		span {
+			margin: 0;
+			span{
+				padding: 0;
+				color: inherit;
+			}
+		}
+	}
+	#kprofile-tabs,
+	#kprofile-edit{
+		dl.tabs{
+			display: table;
+			width: 100%;
+			float: none;
+			border: none;
+			dt{
+				display: table-cell;
+				float: none;
+				text-align: center;
+				padding: 10px 0;
+				&.open,
+				&:hover{
+					color: @linkColor;
+				}
+				& + dt{
+					border-left: none;
+				}
+			}
+		}
+	}
+	.kicon-profile-location,
+	.kicon-profile-gender-male{
+		background: none;
+		&:before{
+			font-family: FontAwesome;
+			font-size: 18px;
+			line-height: 15px;
+		}
+	}
+	.kicon-profile-location{
+		&:before{
+			content: '\f015';
+		}
+	}
+	.kicon-profile-gender-male{
+		&:before{
+			content: '\f007';
+		}
+	}
+
+	.kicon-profile-birthdate,
+	.kicon-profile-email{
+		background: none;
+		&:before{
+			font-family: FontAwesome;
+			font-size: 16px;
+			line-height: 15px;
+		}
+	}
+	.kicon-profile-birthdate{
+		&:before{
+			content: '\f1fd';
+		}
+	}
+	.kicon-profile-email{
+		&:before{
+			content: '\f0e0';
+		}
+	}
+	div.kiconrow{
+		padding-right: 0;
+		span[class*="off"]{
+			display: none;
+		}
+		.kicon-profile{
+			&:before{
+				font-family: FontAwesome;
+				font-size: 17px;
+				line-height: 15px;
+			}
+		}
+	}
+	.kicon-profile-twitter{
+		background: none;
+		&:before{
+			content: '\f081';
+		}
+	}
+	.kicon-profile-facebook{
+		background: none;
+		&:before{
+			content: '\f082';
+		}
+	}
+	.kicon-profile-linkedin{
+		background: none;
+		&:before{
+			content: '\f08c';
+		}
+	}
+	.kicon-profile-skype{
+		background: none;
+		&:before{
+			content: '\f17e';
+		}
+	}
+	.kicon-profile-delicious{
+		background: none;
+		&:before{
+			content: '\f1a5';
+		}
+	}
+	.kicon-profile-digg{
+		background: none;
+		&:before{
+			content: '\f1a6';
+		}
+	}
+	.kicon-profile-flickr{
+		background: none;
+		&:before{
+			content: '\f16e';
+		}
+	}
+	.kprofile-rightcol{
+		ul{
+			margin: 0;
+		}
+	}
+	#kprofile-stats{
+		.kicon-button{
+			cursor: auto;
+		}
+	}
+	span.kmsgtitle,
+	span.kmsgtitle-new{
+		padding-left: 0;
+		background: none;
+	}
+}

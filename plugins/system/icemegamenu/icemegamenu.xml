@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="plugin"
+	version="3.0"
+	group="system"
+	method="upgrade">
+	<name>IceMegaMenu Plugin</name>
+	<author>www.icetheme.com</author>
+	<creationDate>Mrch 2011</creationDate>
+	<copyright>Copyright (C) Copyright  2008 - 2011 IceTheme.com. All rights reserved.</copyright>
+	<license>http://www.icetheme.com GNU/GPL</license>
+	<authorEmail>info@icethemes.com</authorEmail>
+	<authorUrl>http://www.icethemes.com</authorUrl>
+	<version>3.0.0</version>
+	<description>IceMegaMenu plugin used in conjuction with the IceMegaMenu Module. You may change the paramters to each menu item throught the Menu Manager</description>	
+	<files>
+		<folder plugin="icemegamenu">icemegamenu</folder>
+		<filename plugin="icemegamenu">icemegamenu.php</filename>
+	</files>	
+</extension>

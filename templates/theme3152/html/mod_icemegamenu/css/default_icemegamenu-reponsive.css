@@ -1,0 +1,22 @@
+@media (max-width: 979px) {
+	.icemegamenu{
+		overflow: visible !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.icemegamenu{
+		overflow: hidden !important;
+	}
+	.icemegamenu .nav-collapse .navbar-form{
+		padding: 0;
+		margin: 0;
+		display: block;
+	}
+}
+
+
+@media (max-width: 480px){
+
+	
+}
